@@ -1,16 +1,126 @@
+
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="container my-4">
+        <h2 class="text-center mb-4">Cards Gallery</h2>
 
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card rounded">
+                    <img src="https://storage.googleapis.com/acciojob-open-file-collections/image1.jpg" class="card-img-top gallery-img" alt="Gallery image 1" onclick="openLightbox(this)">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Beautiful View</h6>
+                        <p class="card-text">Explore this beautiful scene and enjoy its unique details.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card rounded">
+                    <img src="https://storage.googleapis.com/acciojob-open-file-collections/image2.jpg" class="card-img-top gallery-img" alt="Gallery image 2" onclick="openLightbox(this)">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Nature's Beauty</h6>
+                        <p class="card-text">Discover the charm of nature through this photograph.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card rounded">
+                    <img src="https://storage.googleapis.com/acciojob-open-file-collections/image3.jpg" class="card-img-top gallery-img" alt="Gallery image 3" onclick="openLightbox(this)">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Amazing Moments</h6>
+                        <p class="card-text">A memorable view captured in a single frame.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card rounded">
+                    <img src="https://storage.googleapis.com/acciojob-open-file-collections/image4.jpg" class="card-img-top gallery-img" alt="Gallery image 4" onclick="openLightbox(this)">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Colorful World</h6>
+                        <p class="card-text">Enjoy the colors and details in this beautiful image.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card rounded">
+                    <img src="https://storage.googleapis.com/acciojob-open-file-collections/image5.jpg" class="card-img-top gallery-img" alt="Gallery image 5" onclick="openLightbox(this)">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Hidden Wonders</h6>
+                        <p class="card-text">Take a closer look at the wonders around us.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card rounded">
+                    <img src="https://storage.googleapis.com/acciojob-open-file-collections/image6.jpg" class="card-img-top gallery-img" alt="Gallery image 6" onclick="openLightbox(this)">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">A Special Moment</h6>
+                        <p class="card-text">A special moment worth viewing and remembering.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card rounded">
+                    <img src="https://storage.googleapis.com/acciojob-open-file-collections/image7.jpg" class="card-img-top gallery-img" alt="Gallery image 7" onclick="openLightbox(this)">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Scenic Escape</h6>
+                        <p class="card-text">Enjoy another view from this image collection.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card rounded">
+                    <img src="https://storage.googleapis.com/acciojob-open-file-collections/image8.jpg" class="card-img-top gallery-img" alt="Gallery image 8" onclick="openLightbox(this)">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Picture Perfect</h6>
+                        <p class="card-text">Appreciate the details in this picture-perfect scene.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card rounded">
+                    <img src="https://storage.googleapis.com/acciojob-open-file-collections/image9.jpg" class="card-img-top gallery-img" alt="Gallery image 9" onclick="openLightbox(this)">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Final Highlights</h6>
+                        <p class="card-text">Finish the gallery with one more beautiful view.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="lightbox" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="lightboxImage" src="" class="img-fluid rounded" alt="Enlarged gallery image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
-
 </html>
